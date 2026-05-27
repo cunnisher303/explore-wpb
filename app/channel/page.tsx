@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 // Replace CHANNEL_URL with your actual YouTube channel URL
-const CHANNEL_URL = "https://www.youtube.com/@WhyPeopleBelieve";
+const CHANNEL_URL = "https://www.youtube.com/channel/UCZijIKA4GOc5umi4axWF3ug";
 
 // Add your video IDs here as you publish — get from youtube.com/watch?v=VIDEO_ID
 const videos: { id: string; title: string; desc: string; category: string; color: string }[] = [
