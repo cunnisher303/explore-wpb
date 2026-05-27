@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Workbooks",
@@ -80,8 +81,8 @@ export default function WorkbooksPage() {
               </div>
 
               <div className="md:w-48 shrink-0">
-                <div className="w-full aspect-[3/4] rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)] flex items-center justify-center mb-4 text-4xl">
-                  📘
+                <div className="w-full aspect-[3/4] rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)] flex items-center justify-center mb-4 overflow-hidden">
+                  <Image src="/assets/icon-1080.png" alt="Why People Believe" width={160} height={160} className="rounded-xl" />
                 </div>
                 <a href={w.href} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
                   Get Workbook →

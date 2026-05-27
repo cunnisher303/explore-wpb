@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">W</div>
+              <Image src="/assets/logo-71.png" alt="Why People Believe" width={32} height={32} className="rounded-lg" />
               <span className="font-semibold text-sm text-[var(--text-primary)]">Why People Believe</span>
             </div>
             <p className="text-xs text-[var(--text-muted)] leading-relaxed">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const pillars = [
   { label: "Personality & Identity", color: "var(--primary)", desc: "Understand your cognitive patterns, self-concept, and what actually drives your behavior." },
@@ -37,6 +38,13 @@ export default function HomePage() {
       {/* Hero */}
       <section className="hero-gradient pt-20 pb-24 px-5">
         <div className="max-w-3xl mx-auto text-center">
+          <Image
+            src="/assets/logo-300.png"
+            alt="Why People Believe"
+            width={72}
+            height={72}
+            className="rounded-2xl mx-auto mb-6"
+          />
           <div className="pill mb-6">Psychology for Real Life</div>
           <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6">
             Understand why you<br />do what you do.
