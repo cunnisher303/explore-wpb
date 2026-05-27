@@ -1,65 +1,167 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+const pillars = [
+  { label: "Personality & Identity", color: "var(--primary)", desc: "Understand your cognitive patterns, self-concept, and what actually drives your behavior." },
+  { label: "Romantic Relationships", color: "var(--pink)", desc: "Attachment styles, relationship patterns, and why you show up the way you do with others." },
+  { label: "Personal Growth", color: "var(--teal)", desc: "Habit formation, journaling, and the psychology behind lasting change." },
+  { label: "Mental Health", color: "var(--blue)", desc: "Anxiety, mindset, emotional regulation — without the clinical jargon." },
+];
+
+const workbooks = [
+  {
+    title: "The Introvert Myth",
+    desc: "Most of what you've been told about introversion is wrong. This workbook unpacks the real psychology — and helps you stop apologizing for how you're wired.",
+    href: "https://whypeoplebelieve.gumroad.com/l/bqvsfw",
+    tag: "Personality",
+    tagColor: "var(--primary)",
+  },
+  {
+    title: "The Label Trap",
+    desc: "Anxiety. Depression. Narcissist. We diagnose ourselves and others constantly. This workbook examines what labels actually do to how we think and heal.",
+    href: "https://whypeoplebelieve.gumroad.com/l/xuvsi",
+    tag: "Mental Health",
+    tagColor: "var(--blue)",
+  },
+];
+
+const picks = [
+  { title: "Attached", author: "Amir Levine & Rachel Heller", href: "https://www.amazon.com/s?k=Attached+Amir+Levine&tag=whypeoplebeli-20", topic: "Relationships" },
+  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", href: "https://www.amazon.com/s?k=Thinking+Fast+and+Slow+Kahneman&tag=whypeoplebeli-20", topic: "Personality" },
+  { title: "Atomic Habits", author: "James Clear", href: "https://www.amazon.com/s?k=Atomic+Habits+James+Clear&tag=whypeoplebeli-20", topic: "Personal Growth" },
+  { title: "Maybe You Should Talk to Someone", author: "Lori Gottlieb", href: "https://www.amazon.com/s?k=Maybe+You+Should+Talk+to+Someone&tag=whypeoplebeli-20", topic: "Mental Health" },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      {/* Hero */}
+      <section className="hero-gradient pt-20 pb-24 px-5">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="pill mb-6">Psychology for Real Life</div>
+          <h1 className="text-4xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6">
+            Understand why you<br />do what you do.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-xl mx-auto mb-10">
+            Workbooks, book recommendations, and a psychology app — all built around the patterns that actually run your life.
           </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href="https://whypeoplebelieve.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Try the App Free →
+            </a>
+            <Link href="/workbooks" className="btn-secondary">
+              Browse Workbooks
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Pillars */}
+      <section className="max-w-5xl mx-auto px-5 py-20">
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">What We Cover</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">Four areas. One goal.</h2>
+          <p className="text-[var(--text-secondary)] mt-3 max-w-lg mx-auto">Real self-understanding requires looking at all of it — not just the parts that feel comfortable.</p>
         </div>
-      </main>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {pillars.map((p) => (
+            <div key={p.label} className="card card-hover p-6">
+              <div className="w-2 h-2 rounded-full mb-4" style={{ background: p.color }} />
+              <h3 className="font-semibold text-[var(--text-primary)] mb-2">{p.label}</h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Workbooks */}
+      <section className="bg-[var(--bg-card)] border-y border-[var(--border)] py-20 px-5">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="section-label mb-2">Workbooks</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">Go deeper with guided work.</h2>
+            </div>
+            <Link href="/workbooks" className="text-sm text-[var(--primary)] hover:underline hidden md:block">
+              See all →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {workbooks.map((w) => (
+              <div key={w.title} className="card card-hover p-6 flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ background: `color-mix(in srgb, ${w.tagColor} 15%, transparent)`, color: w.tagColor, border: `1px solid color-mix(in srgb, ${w.tagColor} 30%, transparent)` }}>
+                    {w.tag}
+                  </span>
+                  <span className="text-xs text-[var(--text-muted)]">Workbook</span>
+                </div>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-3">{w.title}</h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed flex-1 mb-6">{w.desc}</p>
+                <a href={w.href} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm justify-center">
+                  Get Workbook →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Book picks */}
+      <section className="max-w-5xl mx-auto px-5 py-20">
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <p className="section-label mb-2">Book Picks</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">What we recommend reading.</h2>
+          </div>
+          <Link href="/picks" className="text-sm text-[var(--primary)] hover:underline hidden md:block">
+            See all →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {picks.map((b) => (
+            <a key={b.title} href={b.href} target="_blank" rel="noopener noreferrer sponsored" className="card card-hover p-5 flex flex-col">
+              <div className="w-10 h-14 rounded-md bg-[var(--bg-elevated)] mb-4 flex items-center justify-center text-xl">📖</div>
+              <p className="text-xs text-[var(--text-muted)] mb-1">{b.topic}</p>
+              <h3 className="font-semibold text-[var(--text-primary)] text-sm mb-1 leading-snug">{b.title}</h3>
+              <p className="text-xs text-[var(--text-muted)]">{b.author}</p>
+              <p className="text-xs text-[var(--primary)] mt-auto pt-4">View on Amazon →</p>
+            </a>
+          ))}
+        </div>
+        <p className="affiliate-note mt-6 text-center">Links are Amazon affiliate links. We earn a small commission at no extra cost to you.</p>
+      </section>
+
+      {/* Channel */}
+      <section className="bg-[var(--bg-card)] border-y border-[var(--border)] py-20 px-5">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="section-label mb-3">The Channel</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">Psychology that actually makes sense.</h2>
+          <p className="text-[var(--text-secondary)] leading-relaxed mb-8 max-w-xl mx-auto">
+            We break down why people believe what they believe — covering personality, relationships, mental health, and the hidden forces behind human behavior.
+          </p>
+          <Link href="/channel" className="btn-primary">
+            Visit the Channel →
+          </Link>
+        </div>
+      </section>
+
+      {/* App CTA */}
+      <section className="max-w-3xl mx-auto px-5 py-24 text-center">
+        <div className="pill mb-6">Free to Start</div>
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+          Ready to understand yourself?
+        </h2>
+        <p className="text-[var(--text-secondary)] leading-relaxed mb-8 max-w-lg mx-auto">
+          The Why You app gives you a personalized psychology program — covering all four pillars — built around your specific patterns.
+        </p>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <a href="https://whypeoplebelieve.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            Try the App Free →
+          </a>
+          <Link href="/workbooks" className="btn-secondary">
+            Browse Workbooks
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
