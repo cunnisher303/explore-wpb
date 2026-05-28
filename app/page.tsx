@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LeadMagnet } from "@/components/LeadMagnet";
 
 const pillars = [
   { label: "Personality & Identity", color: "var(--primary)", desc: "Understand your cognitive patterns, self-concept, and what actually drives your behavior." },
@@ -137,6 +138,9 @@ export default function HomePage() {
         </div>
         <p className="affiliate-note mt-6 text-center">Links are Amazon affiliate links. We earn a small commission at no extra cost to you.</p>
       </section>
+
+      {/* Lead Magnet */}
+      <LeadMagnet />
 
       {/* Channel */}
       <section className="bg-[var(--bg-card)] border-y border-[var(--border)] py-20 px-5">
