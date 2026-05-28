@@ -12,6 +12,7 @@ const workbooks = [
     tag: "Personality & Identity",
     tagColor: "var(--primary)",
     href: "https://whypeoplebelieve.gumroad.com/l/bqvsfw",
+    cover: "/assets/cover-quiet-equation.png",
     description: "Most of what you've been told about introversion is wrong. It's not about being shy. It's not about hating people. And it's definitely not a flaw to fix.",
     whatYouGet: [
       "The real psychology behind introversion vs. extroversion",
@@ -26,6 +27,7 @@ const workbooks = [
     tag: "Mental Health",
     tagColor: "var(--blue)",
     href: "https://whypeoplebelieve.gumroad.com/l/xuvsi",
+    cover: null,
     description: "Anxiety. Depression. Narcissist. Borderline. We diagnose ourselves and each other constantly — often without realizing what labels actually do to our thinking.",
     whatYouGet: [
       "How diagnostic labels shape (and distort) self-perception",
@@ -82,7 +84,11 @@ export default function WorkbooksPage() {
 
               <div className="md:w-48 shrink-0">
                 <div className="w-full aspect-[3/4] rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)] flex items-center justify-center mb-4 overflow-hidden">
-                  <Image src="/assets/icon-1080.png" alt="Why People Believe" width={160} height={160} className="rounded-xl" />
+                  {w.cover ? (
+                    <Image src={w.cover} alt={w.title} width={192} height={256} className="w-full h-full object-cover" />
+                  ) : (
+                    <Image src="/assets/icon-1080.png" alt="Why People Believe" width={160} height={160} className="rounded-xl" />
+                  )}
                 </div>
                 <a href={w.href} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
                   Get Workbook →
