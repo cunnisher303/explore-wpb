@@ -8,10 +8,39 @@ export const metadata: Metadata = {
 // Replace CHANNEL_URL with your actual YouTube channel URL
 const CHANNEL_URL = "https://www.youtube.com/channel/UCZijIKA4GOc5umi4axWF3ug";
 
-// Add your video IDs here as you publish — get from youtube.com/watch?v=VIDEO_ID
-const videos: { id: string; title: string; desc: string; category: string; color: string }[] = [
-  // Example — replace with real video IDs:
-  // { id: "dQw4w9WgXcQ", title: "Video Title", desc: "Short description.", category: "Personality", color: "var(--primary)" },
+const videos = [
+  {
+    id: "g_Q-Xl6lGpc",
+    title: "The Alpha Male Theory Was Based on a LIE",
+    desc: "The 'alpha wolf' concept came from a 1947 captive wolf study — then got applied to humans. Here's what psychology actually says.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 25, 2026",
+  },
+  {
+    id: "YPCH10hJsjU",
+    title: "The DARK Empath | Why Empathy Doesn't Make You Kind",
+    desc: "Some people read emotions precisely but feel almost none of their own. Research calls them dark empaths — and they're harder to spot than narcissists.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 21, 2026",
+  },
+  {
+    id: "ZD2Uygp0NvQ",
+    title: "Introversion Explained | You're Probably Wrong About Yourself",
+    desc: "Most people who call themselves introverts are misidentifying. The real psychology of introversion is more specific — and more interesting.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 15, 2026",
+  },
+  {
+    id: "N5BLMdksY4w",
+    title: "This Personality Combination Is More Common Than You Think",
+    desc: "Some individuals score high on both darkness and empathy. What that combination actually looks like — and why it matters.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 20, 2026",
+  },
 ];
 
 const topics = [
@@ -72,8 +101,11 @@ export default function ChannelPage() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <span className="text-xs font-semibold" style={{ color: v.color }}>{v.category}</span>
-                  <h3 className="font-bold text-[var(--text-primary)] mt-1 mb-2">{v.title}</h3>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-semibold" style={{ color: v.color }}>{v.category}</span>
+                    <span className="text-xs text-[var(--text-muted)]">· {v.date}</span>
+                  </div>
+                  <h3 className="font-bold text-[var(--text-primary)] mb-2">{v.title}</h3>
                   <p className="text-sm text-[var(--text-secondary)]">{v.desc}</p>
                 </div>
               </a>
