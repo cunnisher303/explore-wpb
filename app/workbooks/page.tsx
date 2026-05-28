@@ -8,6 +8,23 @@ export const metadata: Metadata = {
 
 const workbooks = [
   {
+    title: "The Alpha Problem",
+    tag: "Masculinity & Identity",
+    tagColor: "var(--pink)",
+    href: null,
+    cover: null,
+    description: "The alpha/beta/sigma framework was built on a debunked 1947 captive wolf study — and the researcher who started it has spent the last twenty years trying to retract it. This 12-chapter read tears apart what the framework is actually doing to the men running it.",
+    whatYouGet: [
+      "The actual origin of the alpha concept (and why the scientist who coined it now disowns it)",
+      "Why men are starving for the framework — and what it's actually selling them",
+      "The difference between dominance and confidence (they're not the same)",
+      "What the framework costs you in your relationships with women, with other men, with yourself",
+      "The sigma trick: how the framework's escape valve is still the framework",
+      "What real masculine presence looks like — and how to build it without the manual",
+    ],
+    forYouIf: "You've consumed the alpha content and felt the diminishing returns. Or you know a man who's deep in it and you want to understand what he's actually running.",
+  },
+  {
     title: "The Body Follows the Story",
     tag: "Personal Growth",
     tagColor: "var(--teal)",
