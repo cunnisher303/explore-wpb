@@ -8,6 +8,22 @@ export const metadata: Metadata = {
 
 const workbooks = [
   {
+    title: "The Body Follows the Story",
+    tag: "Personal Growth",
+    tagColor: "var(--teal)",
+    href: null,
+    cover: "/assets/cover-body-follows-story.png",
+    description: "Why you become what you believe about yourself — and how to change the belief. A 12-chapter psychology read on fitness, identity, and the loops that keep you stuck.",
+    whatYouGet: [
+      "Why motivation can't bridge to habit — and what actually can",
+      "Self-perception theory: how identity quietly drives behavior",
+      "Why 'discipline' is a lie (and what fit people are actually doing)",
+      "How the body holds story — and what happens when you try to outwork it",
+      "The 60-day identity shift that makes change automatic",
+    ],
+    forYouIf: "You've tried programs, fallen off, and felt like you just can't stay consistent. The problem isn't your willpower. It's the story underneath.",
+  },
+  {
     title: "The Quiet Equation",
     tag: "Personality & Identity",
     tagColor: "var(--primary)",
@@ -106,10 +122,21 @@ export default function WorkbooksPage() {
                     <Image src="/assets/icon-1080.png" alt="Why People Believe" width={160} height={160} className="rounded-xl" />
                   )}
                 </div>
-                <a href={w.href} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
-                  Get Workbook →
-                </a>
-                <p className="text-xs text-[var(--text-muted)] text-center mt-2">Available on Gumroad</p>
+                {w.href ? (
+                  <>
+                    <a href={w.href} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
+                      Get Workbook →
+                    </a>
+                    <p className="text-xs text-[var(--text-muted)] text-center mt-2">Available on Gumroad</p>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-full px-4 py-2.5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)] text-center text-sm text-[var(--text-secondary)]">
+                      Coming Soon
+                    </div>
+                    <p className="text-xs text-[var(--text-muted)] text-center mt-2">Releasing this week</p>
+                  </>
+                )}
               </div>
             </div>
           </div>
