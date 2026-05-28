@@ -152,6 +152,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Disclaimer */}
+      <div className="max-w-3xl mx-auto px-5 pb-2 text-center">
+        <p className="text-xs text-[var(--text-muted)] italic">
+          Content on this site is for educational purposes only and is not a substitute for professional psychological or medical advice.
+        </p>
+      </div>
+
       {/* App CTA */}
       <section className="max-w-3xl mx-auto px-5 py-24 text-center">
         <div className="pill mb-6">Free to Start</div>
