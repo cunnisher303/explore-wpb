@@ -6,39 +6,60 @@ export const metadata: Metadata = {
   description: "Psychology articles on personality, relationships, mental health, and behavior. Written for real people, not clinicians.",
 };
 
-// Latest posts — update this list as new blog posts are published on whypeoplebelieve.com
 const posts = [
   {
-    title: "Why You Repeat Patterns You Hate",
-    slug: "why-you-repeat-patterns",
-    excerpt: "The psychology behind self-sabotage, trauma bonding, and why knowing better rarely means doing better.",
-    category: "Mental Health",
-    color: "var(--blue)",
-    date: "May 2026",
-  },
-  {
-    title: "The Attachment Style Everyone Ignores",
-    slug: "disorganized-attachment",
-    excerpt: "Most people know about anxious and avoidant. Disorganized attachment is the one that explains the rest.",
+    title: "Marriage, Cohabitation, or Situationship: Which One Actually Lasts?",
+    slug: "marriage-cohabitation-situationship-psychology",
+    excerpt: "The psychology behind commitment, avoidance, and why the structure of a relationship shapes how long it survives.",
     category: "Relationships",
     color: "var(--pink)",
-    date: "May 2026",
+    date: "May 22, 2026",
+    readTime: "9 min",
   },
   {
-    title: "What Your Cognitive Style Actually Tells You",
-    slug: "cognitive-style-explained",
-    excerpt: "It's not about how smart you are. It's about how your mind organizes the world — and why that shapes everything.",
+    title: "You're Probably Not an Introvert: What the Psychology Actually Says",
+    slug: "are-you-really-an-introvert",
+    excerpt: "The word gets thrown around constantly. The actual science is more specific — and more interesting.",
     category: "Personality",
     color: "var(--primary)",
-    date: "April 2026",
+    date: "May 22, 2026",
+    readTime: "7 min",
   },
   {
-    title: "The Problem With Calling Someone a Narcissist",
-    slug: "narcissist-label-problem",
-    excerpt: "Labels explain behavior but they also end the conversation. Here's what we lose when we reach for the diagnosis.",
-    category: "Mental Health",
-    color: "var(--blue)",
-    date: "April 2026",
+    title: "Alpha, Beta, Sigma: Why Personality Labels Are Failing You",
+    slug: "alpha-beta-sigma-personality-labels",
+    excerpt: "The internet loves these categories. Psychology doesn't. Here's why the framework breaks down — and what to use instead.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 20, 2026",
+    readTime: "6 min",
+  },
+  {
+    title: "The Dark Empath: When Understanding Becomes a Weapon",
+    slug: "the-dark-empath",
+    excerpt: "Empathy isn't always a virtue. The dark empath uses emotional intelligence to manipulate — and they're harder to spot than narcissists.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "May 15, 2026",
+    readTime: "6 min",
+  },
+  {
+    title: "What's Your Attachment Style? The Four Patterns Explained",
+    slug: "what-is-your-attachment-style",
+    excerpt: "Secure, anxious, avoidant, disorganized — your attachment pattern shapes every relationship you have. Here's how to identify yours.",
+    category: "Relationships",
+    color: "var(--pink)",
+    date: "May 10, 2026",
+    readTime: "7 min",
+  },
+  {
+    title: "Identity Over Motivation: The 60-Day Switch That Makes Fitness Automatic",
+    slug: "identity-shift-60-days-to-athlete",
+    excerpt: "Motivation runs out. Identity doesn't. The psychology of why who you think you are determines whether habits stick.",
+    category: "Personal Growth",
+    color: "var(--teal)",
+    date: "May 22, 2026",
+    readTime: "7 min",
   },
 ];
 
@@ -70,6 +91,7 @@ export default function BlogPage() {
                   {post.category}
                 </span>
                 <span className="text-xs text-[var(--text-muted)]">{post.date}</span>
+                <span className="text-xs text-[var(--text-muted)]">· {post.readTime} read</span>
               </div>
               <h2 className="text-lg font-bold text-[var(--text-primary)] mb-2">{post.title}</h2>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{post.excerpt}</p>
