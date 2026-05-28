@@ -10,9 +10,9 @@ const pillars = [
 
 const workbooks = [
   {
-    title: "The Introvert Myth",
-    desc: "Most of what you've been told about introversion is wrong. This workbook unpacks the real psychology — and helps you stop apologizing for how you're wired.",
-    href: "https://whypeoplebelieve.gumroad.com/l/bqvsfw",
+    title: "The Quiet Equation",
+    desc: "What introverts and extroverts actually get wrong about each other — and what the science really says. 12 chapters, real research, no agenda.",
+    href: "https://whypeoplebelieve.gumroad.com/l/trjlpo",
     tag: "Personality",
     tagColor: "var(--primary)",
   },

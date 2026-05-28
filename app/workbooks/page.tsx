@@ -8,11 +8,27 @@ export const metadata: Metadata = {
 
 const workbooks = [
   {
+    title: "The Quiet Equation",
+    tag: "Personality & Identity",
+    tagColor: "var(--primary)",
+    href: "https://whypeoplebelieve.gumroad.com/l/trjlpo",
+    cover: "/assets/cover-quiet-equation.png",
+    description: "You've been told introverts are shy and extroverts are loud. The science tells a different story. This 12-chapter read unpacks the real psychology — through two characters, real research, and zero agenda.",
+    whatYouGet: [
+      "The neurological difference between introverts and extroverts (it's dopamine, not personality)",
+      "What each type gets completely wrong about the other",
+      "How these differences play out in relationships, work, and parenting",
+      "Why the digital age quietly rewards one type over the other",
+      "What changes when you stop fighting your wiring",
+    ],
+    forYouIf: "You've ever felt out of place in a room, drained after a 'good' night, or wired differently from the people around you — and wanted a real explanation instead of a personality quiz.",
+  },
+  {
     title: "The Introvert Myth",
     tag: "Personality & Identity",
     tagColor: "var(--primary)",
     href: "https://whypeoplebelieve.gumroad.com/l/bqvsfw",
-    cover: "/assets/cover-quiet-equation.png",
+    cover: null,
     description: "Most of what you've been told about introversion is wrong. It's not about being shy. It's not about hating people. And it's definitely not a flaw to fix.",
     whatYouGet: [
       "The real psychology behind introversion vs. extroversion",
