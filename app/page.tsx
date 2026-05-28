@@ -18,11 +18,11 @@ const workbooks = [
     tagColor: "var(--primary)",
   },
   {
-    title: "The Label Trap",
-    desc: "Anxiety. Depression. Narcissist. We diagnose ourselves and others constantly. This workbook examines what labels actually do to how we think and heal.",
-    href: "https://whypeoplebelieve.gumroad.com/l/xuvsi",
-    tag: "Mental Health",
-    tagColor: "var(--blue)",
+    title: "The Alpha Problem",
+    desc: "The alpha framework was built on a debunked wolf study. This 12-chapter read tears apart what it's actually doing to the men running it.",
+    href: "https://whypeoplebelieve.gumroad.com/l/ninmq",
+    tag: "Masculinity",
+    tagColor: "var(--pink)",
   },
 ];
 

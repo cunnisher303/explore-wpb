@@ -11,7 +11,7 @@ const workbooks = [
     title: "The Alpha Problem",
     tag: "Masculinity & Identity",
     tagColor: "var(--pink)",
-    href: null,
+    href: "https://whypeoplebelieve.gumroad.com/l/ninmq",
     cover: "/assets/cover-alpha-problem.png",
     description: "The alpha/beta/sigma framework was built on a debunked 1947 captive wolf study — and the researcher who started it has spent the last twenty years trying to retract it. This 12-chapter read tears apart what the framework is actually doing to the men running it.",
     whatYouGet: [
