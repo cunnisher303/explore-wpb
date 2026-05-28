@@ -30,7 +30,7 @@ const books = [
 export function LeadMagnet() {
   const [selected, setSelected] = useState<string>("quiet-equation");
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "already">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const chosen = books.find((b) => b.id === selected)!;
@@ -52,6 +52,9 @@ export function LeadMagnet() {
       if (data.success) {
         setStatus("success");
         setEmail("");
+      } else if (data.error === "already_claimed") {
+        setStatus("already");
+        setErrorMsg(data.message || "You've already claimed a free ebook with this email.");
       } else {
         setStatus("error");
         setErrorMsg("Something went wrong. Please try again.");
@@ -132,6 +135,18 @@ export function LeadMagnet() {
               <p className="text-sm text-[var(--text-secondary)] text-left">
                 <span className="font-semibold text-[var(--text-primary)]">Check your inbox.</span>{" "}
                 <em>{chosen.title}</em> is on its way.
+              </p>
+            </div>
+          ) : status === "already" ? (
+            <div className="px-5 py-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)]">
+              <p className="text-sm text-[var(--text-secondary)] text-center mb-2">
+                <span className="font-semibold text-[var(--text-primary)]">One free ebook per email.</span>
+              </p>
+              <p className="text-xs text-[var(--text-muted)] text-center">
+                {errorMsg} Want another?{" "}
+                <a href="https://whypeoplebelieve.gumroad.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+                  Grab one on Gumroad for $12
+                </a>.
               </p>
             </div>
           ) : (
