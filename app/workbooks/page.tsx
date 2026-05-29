@@ -28,7 +28,7 @@ const workbooks = [
     title: "The Body Follows the Story",
     tag: "Personal Growth",
     tagColor: "var(--teal)",
-    href: null,
+    href: "https://whypeoplebelieve.gumroad.com/l/kiocrd",
     cover: "/assets/cover-body-follows-story.png",
     description: "Why you become what you believe about yourself — and how to change the belief. A 12-chapter psychology read on fitness, identity, and the loops that keep you stuck.",
     whatYouGet: [
