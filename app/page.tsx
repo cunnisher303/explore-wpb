@@ -64,6 +64,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Welcome Video */}
+      {/* TODO: Replace YOUTUBE_VIDEO_ID below with your actual YouTube video ID once uploaded */}
+      {false && (
+        <section className="max-w-3xl mx-auto px-5 py-16">
+          <div className="text-center mb-8">
+            <p className="section-label mb-3">Welcome</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-3">
+              A quick hello from the host.
+            </h2>
+            <p className="text-[var(--text-secondary)] leading-relaxed max-w-lg mx-auto">
+              What this channel is, why it exists, and what you&apos;ll get out of it.
+            </p>
+          </div>
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[var(--border)] shadow-lg" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?rel=0&modestbranding=1"
+              title="Welcome to Why People Believe"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </section>
+      )}
+
       {/* Pillars */}
       <section className="max-w-5xl mx-auto px-5 py-20">
         <div className="text-center mb-12">
