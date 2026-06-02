@@ -10,6 +10,14 @@ const CHANNEL_URL = "https://www.youtube.com/channel/UCZijIKA4GOc5umi4axWF3ug";
 
 const videos = [
   {
+    id: "-0J-O74lc4s",
+    title: "Empath vs Narcissist vs Normal — One is Missing",
+    desc: "Everyone talks about empaths and narcissists. But there's a third type nobody mentions — and it changes how the whole dynamic works.",
+    category: "Personality",
+    color: "var(--primary)",
+    date: "Jun 2, 2026",
+  },
+  {
     id: "g_Q-Xl6lGpc",
     title: "The Alpha Male Theory Was Based on a LIE",
     desc: "The 'alpha wolf' concept came from a 1947 captive wolf study — then got applied to humans. Here's what psychology actually says.",
